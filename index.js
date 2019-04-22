@@ -1,6 +1,20 @@
 const { reservedES3, reservedES5 } = require('./reserved')
 
 /**
+ * Sanitize a string for use as an identifier name
+ *
+ * Replaces invalid character sequences with _ and may add a _ prefix if the
+ * resulting name would conflict with a JavaScript reserved name.
+ *
+ * @param {string} key The desired identifier name
+ * @returns {string}
+ */
+function identifier(key) {
+  const id = key.trim().replace(/\W+/g, '_')
+  return reservedES3[id] || reservedES5[id] || /^\d/.test(id) ? '_' + id : id
+}
+
+/**
  * Sanitize a string for use as a property name
  *
  * By default uses `obj.key` notation, falling back to `obj["key"]` if the key
@@ -20,12 +34,4 @@ function property(obj, key) {
   }
 }
 
-/**
- * Utility function for escaping a function name if required
- */
-function funcname(key) {
-  const fn = key.trim().replace(/\W+/g, '_');
-  return reservedES3[fn] || reservedES5[fn] || /^\d/.test(fn) ? '_' + fn : fn;
-}
-
-module.exports = { funcname, property }
+module.exports = { identifier, property }

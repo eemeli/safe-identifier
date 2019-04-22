@@ -1,13 +1,13 @@
-# safe-names
+# safe-identifier
 
 Sanitize strings for use as JavaScript identifiers & property names.
 
 ```
-npm install --save safe-names
+npm install --save safe-identifier
 ```
 
 ```js
-import { identifier, property } from 'safe-names'
+import { identifier, property } from 'safe-identifier'
 
 identifier('Foo') === 'Foo'
 identifier('enum') === '_enum'

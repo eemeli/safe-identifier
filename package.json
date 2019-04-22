@@ -1,0 +1,24 @@
+{
+  "name": "safe-names",
+  "version": "0.0.1",
+  "description": "Sanitize strings for use as JavaScript identifiers & property names",
+  "main": "index.js",
+  "repository": "eemeli/safe-names.git",
+  "keywords": [
+    "es3",
+    "es5",
+    "esnext",
+    "reserved",
+    "words",
+    "code",
+    "generation",
+    "identifier",
+    "property"
+  ],
+  "author": "Eemeli Aro <eemeli@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eemeli/safe-names/issues"
+  },
+  "homepage": "https://github.com/eemeli/safe-names#readme"
+}

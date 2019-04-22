@@ -26,8 +26,9 @@ const reservedES3 = {
   try: true
 }
 
-const reservedES5 = {
+const reservedESnext = {
   // in addition to reservedES3
+  await: true,
   debugger: true,
   class: true,
   enum: true,
@@ -50,4 +51,4 @@ const reservedES5 = {
   static: true
 }
 
-module.exports = { reservedES3, reservedES5 }
+module.exports = { reservedES3, reservedESnext }

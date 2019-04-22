@@ -1,4 +1,4 @@
-const { reservedES3, reservedES5 } = require('./reserved')
+const { reservedES3, reservedESnext } = require('./reserved')
 
 /**
  * Sanitize a string for use as an identifier name
@@ -11,7 +11,7 @@ const { reservedES3, reservedES5 } = require('./reserved')
  */
 function identifier(key) {
   const id = key.trim().replace(/\W+/g, '_')
-  return reservedES3[id] || reservedES5[id] || /^\d/.test(id) ? '_' + id : id
+  return reservedES3[id] || reservedESnext[id] || /^\d/.test(id) ? '_' + id : id
 }
 
 /**

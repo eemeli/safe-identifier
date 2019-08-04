@@ -2,7 +2,8 @@
   "name": "safe-identifier",
   "version": "0.1.0",
   "description": "Sanitize strings for use as JavaScript identifiers & property names",
-  "main": "index.js",
+  "main": "index",
+  "sideEffects": false,
   "repository": "eemeli/safe-identifier.git",
   "keywords": [
     "es3",

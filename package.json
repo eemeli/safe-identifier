@@ -1,6 +1,6 @@
 {
   "name": "safe-identifier",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "author": "Eemeli Aro <eemeli@gmail.com>",
   "license": "ISC",
   "description": "Sanitize strings for use as JavaScript identifiers & property names",

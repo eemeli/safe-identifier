@@ -22,7 +22,7 @@ function hashCode(str) {
  * @returns {string}
  */
 function identifier(key, unique) {
-  if (unique) key += ' ' + hashCode(key)
+  if (unique) key += ' ' + hashCode(key).toString(36)
   const id = key.trim().replace(/\W+/g, '_')
   return reservedES3[id] || reservedESnext[id] || /^\d/.test(id) ? '_' + id : id
 }

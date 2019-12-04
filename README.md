@@ -11,7 +11,8 @@ import { identifier, property } from 'safe-identifier'
 
 identifier('Foo') === 'Foo'
 identifier('enum') === '_enum'
-identifier(' my \0var ') === 'my_var'
+identifier('my var', true) === 'my_var_hk17pp'
+identifier(' my \0var ', true) === 'my_var_1d8fi3'
 
 property('Foo', 'bar') === 'Foo.bar'
 property('Foo', 'bar\nbar') === 'Foo["bar\\nbar"]'

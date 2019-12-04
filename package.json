@@ -1,10 +1,9 @@
 {
   "name": "safe-identifier",
   "version": "0.2.0",
+  "author": "Eemeli Aro <eemeli@gmail.com>",
+  "license": "ISC",
   "description": "Sanitize strings for use as JavaScript identifiers & property names",
-  "main": "index",
-  "sideEffects": false,
-  "repository": "eemeli/safe-identifier.git",
   "keywords": [
     "es3",
     "es5",
@@ -16,10 +15,12 @@
     "identifier",
     "property"
   ],
-  "author": "Eemeli Aro <eemeli@gmail.com>",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/eemeli/safe-identifier/issues"
-  },
-  "homepage": "https://github.com/eemeli/safe-identifier#readme"
+  "main": "index",
+  "sideEffects": false,
+  "repository": "https://github.com/eemeli/safe-identifier.git",
+  "homepage": "https://github.com/eemeli/safe-identifier#readme",
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  }
 }

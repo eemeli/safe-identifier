@@ -1,4 +1,4 @@
-import { reservedES3, reservedESnext } from './reserved'
+import reserved from './reserved.js'
 
 // from https://werxltd.com/wp/2010/05/13/javascript-implementation-of-javas-string-hashcode-method/
 function hashCode(str) {
@@ -14,11 +14,13 @@ function hashCode(str) {
 export function identifier(key, unique) {
   if (unique) key += ' ' + hashCode(key).toString(36)
   const id = key.trim().replace(/\W+/g, '_')
-  return reservedES3[id] || reservedESnext[id] || /^\d/.test(id) ? '_' + id : id
+  return reserved.ES3[id] || reserved.ESnext[id] || /^\d/.test(id)
+    ? '_' + id
+    : id
 }
 
 export function property(obj, key) {
-  if (/^[A-Z_$][0-9A-Z_$]*$/i.test(key) && !reservedES3[key]) {
+  if (/^[A-Z_$][0-9A-Z_$]*$/i.test(key) && !reserved.ES3[key]) {
     return obj ? obj + '.' + key : key
   } else {
     const jkey = JSON.stringify(key)

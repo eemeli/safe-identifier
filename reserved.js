@@ -1,4 +1,4 @@
-const reservedES3 = {
+const ES3 = {
   break: true,
   continue: true,
   delete: true,
@@ -26,7 +26,7 @@ const reservedES3 = {
   try: true
 }
 
-const reservedESnext = {
+const ESnext = {
   // in addition to reservedES3
   await: true,
   debugger: true,
@@ -51,4 +51,4 @@ const reservedESnext = {
   static: true
 }
 
-module.exports = { reservedES3, reservedESnext }
+module.exports = { ES3, ESnext }

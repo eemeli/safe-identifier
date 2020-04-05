@@ -15,7 +15,19 @@
     "identifier",
     "property"
   ],
-  "main": "index",
+  "main": "./index.js",
+  "type": "commonjs",
+  "exports": {
+    ".": [
+      {
+        "import": "./index.mjs",
+        "require": "./index.js"
+      },
+      "./index.js"
+    ],
+    "reserved": "./reserved.js"
+  },
+  "browser": "./index.mjs",
   "sideEffects": false,
   "repository": "https://github.com/eemeli/safe-identifier.git",
   "homepage": "https://github.com/eemeli/safe-identifier#readme",

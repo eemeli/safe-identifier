@@ -25,7 +25,8 @@
       },
       "./index.js"
     ],
-    "./reserved": "./reserved.js"
+    "./reserved": "./reserved.js",
+    "./package.json": "./package.json"
   },
   "browser": "./index.mjs",
   "sideEffects": false,

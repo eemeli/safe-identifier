@@ -2,7 +2,7 @@
 
 ## Supported Versions
 
-Security updates will be provided for the most recent minor releases of all packages.
+Security updates will be provided for the most recent minor release of `safe-identifier`.
 
 Updates for earlier releases may be considered, but are not guaranteed.
 
